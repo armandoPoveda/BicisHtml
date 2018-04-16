@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="css/styleform.css">
+</head>
+
+<body>
+    <h1>FORMULARIOS</h1>
+    <!--formulario-->
+    <!--<form action="mailto:armandokiter@hotmail.es" method="POST" enctype="text/plain">-->
+        <!--web para enviar formularios automáticamente-->
+        <form action="https://formspree.io/armandokiter@hotmail.es" method="POST">
+        <!--input hidden, no se ve nada en el formulario pero se envía con el valor-->
+        <p>
+            <input type="hidden" name="mensaje" value="mensaje de soporte">
+        </p>
+        <!--input type text-->
+        <p>
+            <label for="nombreid">Nombre:</label>
+            <input type="text" name="nombre" id="nombreid" value="Nombre">
+        </p>
+        <p>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" placeholder="escribe tus apellidos">
+        </p>
+        <!--input type email-->
+        <p>
+            <label for="emailid">Email</label>
+            <input type="email" name="email" id="emailid" value="x@x.es" required>
+        </p>
+        <!--input type checkbox-->
+        <p>
+            <input type="checkbox" name="urgente" id="urgenteid" value="Es urgente">
+            <label for="urgenteid">Es urgente</label>
+        </p>
+        <!--input type radiobutton-->
+        <p>
+            <label for="asunto">Asunto</label>
+            <br>
+            <input type="radio" name="asunto" id="error" value="Error" checked>
+            <label for="error">Error encontrado</label>
+            <br>
+            <input type="radio" name="asunto" id="problema" value="Problema">
+            <label for="problema">Problema con el servidor</label>
+            <br>
+            <input type="radio" name="asunto" id="sugerencia" value="Sugerencia">
+            <label for="sugerencia">Sugerencia</label>
+        </p>
+        <!--input type select-->
+        <p>
+            <label for="sistema operativo">Sistema Operativo</label>
+            <select name="so" id="sistema operativo">
+                <option value="windows">Windows</option>
+                <option value="linux">Linux</option>
+                <option value="mac" selected>Mac OSX</option>
+            </select>
+        </p>
+        <!--textArea-->
+        <p>
+            <label for="comentarios">Comentarios:</label>
+            <br>
+            <textarea name="coment" id="comentarios" cols="40" rows="6" placeholder="Escribe tu comentario"></textarea>
+        </p>
+        <!--input type date-->
+        <p>
+            <label for="fecha">Fecha:</label>
+            <input type="date" name="fecha" id="fecha">
+        </p>
+        <!--input type range-->
+        <p>
+            <label for="rango">Rango:</label>
+            <input type="range" name="rango" id="rango">
+        </p>
+        <!--input type url-->
+        <p>
+            <label for="url">URL:</label>
+            <input type="url" name="url" id="url" required placeholder="http://" pattern="http:\/\/.+">
+        </p>
+        <!--input type submit y reste-->
+        <p>
+            <input type="submit" value="enviar">
+            <input type="reset" value="borrar">
+        </p>
+    </form>
+</body>
+
+</html>
